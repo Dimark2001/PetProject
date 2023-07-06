@@ -13,7 +13,6 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
-		public Action OnGetAWeapon;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -66,11 +65,6 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
-		}
-		
-		public void WeaponInput()
-		{
-			OnGetAWeapon?.Invoke();
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
